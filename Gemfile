@@ -4,7 +4,7 @@ ruby "3.3.1"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[ jruby mingw x64_mingw ]
 gem "bootsnap", require: false
 
 gem 'redis', '~> 5.2'
