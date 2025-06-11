@@ -1,8 +1,8 @@
 class ApplicationService
-  def self.call(*args, &block)
-    new(*args, &block).call
+  def self.call(**kwargs, &block)
+    new(**kwargs, &block).call
   end
 
-  class ItemNotFound < StandardError; end
   class InvalidQuantity < StandardError; end
+  class ItemNotFound < StandardError; end
 end

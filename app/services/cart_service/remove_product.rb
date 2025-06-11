@@ -13,7 +13,7 @@ module CartService
 
     def remove_product
       item = @cart.cart_items.find_by(product: @product)
-      raise ItemNotFound unless item
+      raise ItemNotFound, I18n.t("errors.item_not_found") if item.nil?
 
       item.destroy!
     end

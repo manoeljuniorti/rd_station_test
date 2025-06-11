@@ -8,7 +8,6 @@ class Cart < ApplicationRecord
   scope :abandoned_before, ->(time) { where("abandoned_at IS NOT NULL AND abandoned_at < ?", time) }
   scope :not_yet_abandoned, -> { where(abandoned_at: nil) }
 
-
   def total_price
     cart_items.includes(:product).sum(&:total_price)
   end

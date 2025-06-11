@@ -11,7 +11,7 @@ module CartService
     end
 
     def add_product
-      raise InvalidQuantity if @quantity <= 0
+      raise InvalidQuantity, I18n.t("errors.invalid_quantity") if @quantity <= 0
 
       item = @cart.cart_items.find_or_initialize_by(product: @product)
       item.quantity = (item.quantity || 0) + @quantity
