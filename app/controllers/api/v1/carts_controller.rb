@@ -35,6 +35,10 @@ module Api
       def find_product
         Product.find(params[:product_id])
       end
+
+      def params_cart
+        params.permit(:product_id, :quantity)
+      end
     end
   end
 end

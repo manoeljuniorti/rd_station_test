@@ -19,7 +19,7 @@ Product.create([
     price: 14999.99
   },
   {
-    name: 'Xiamo Mi 27 Pro Plus Master Ultra',
+    name: 'Xiaomi Mi 27 Pro Plus Master Ultra',
     price: 999.99
   }
 ])
