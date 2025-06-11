@@ -1,0 +1,4 @@
+pt-BR:
+  errors:
+    item_not_found: "Item não encontrado no carrinho."
+    invalid_quantity: "A quantidade não pode ser menor ou igual a zero."
