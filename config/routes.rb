@@ -1,9 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
+
   namespace :api, defaults: { format: :json }, path: '/api' do
     namespace :v1, path: '/v1' do
-      mount Sidekiq::Web => '/sidekiq'
       resources :products
       get "up" => "rails/health#show", as: :rails_health_check
 
