@@ -31,8 +31,8 @@ Este projeto é um teste técnico para vaga de desenvolvedor backend para a empr
 ### Configurações:
 1. Clone o repositório:
    ```bash
-   git clone <repo_url>
-   cd <repo_folder>
+   git clone git@github.com:manoeljuniorti/rd_station_test.git
+   cd < ./diretório onde o projeto foi salvo >
    ```
 
 2. Configure o banco localmente, editando config/database.yml se necessário para usar seu usuário/senha/local.
