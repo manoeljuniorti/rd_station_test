@@ -11,7 +11,7 @@ RSpec.describe MarkCartAsAbandonedJob, type: :job do
 
     it 'abandons carts inactive for more than 3 hours and removes those abandoned for more than 7 days' do
       expect {
-        perform_enqueued_jobs { described_class.perform_async }
+        perform_enqueued_jobs { described_class.perform_now }
       }.to change { Cart.count }.by(-1)
 
       expect(old_cart.reload.abandoned_at).not_to be_nil
