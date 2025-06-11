@@ -1,6 +1,7 @@
 :concurrency: 3
 :timeout: 60
 :verbose: true
+
 :queues:
   - critical
   - default
@@ -8,8 +9,10 @@
   - active_storage_analysis
   - active_storage_purge
 
-:schedule:
-  mark_cart_as_abandoned:
-    cron: "*/30 * * * *"
-    class: "MarkCartAsAbandonedJob"
-    queue: default
+:scheduler:
+  :enabled: true
+  :schedule:
+    mark_cart_as_abandoned_job:
+      cron: "0 */3 * * *"  # a cada 3 horas
+      class: "MarkCartAsAbandonedJob"
+      queue: default
