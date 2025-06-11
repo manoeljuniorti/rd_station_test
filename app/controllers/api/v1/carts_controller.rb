@@ -1,8 +1,6 @@
 module Api
   module V1
     class CartsController < BaseController
-      before_action :load_cart
-
       def create
         product = find_product
         quantity = params[:quantity].to_i
@@ -34,6 +32,8 @@ module Api
 
       def find_product
         Product.find(params[:product_id])
+      rescue ActiveRecord::RecordNotFound
+        raise ApplicationService::ItemNotFound, I18n.t('errors.item_not_found')
       end
 
       def params_cart
