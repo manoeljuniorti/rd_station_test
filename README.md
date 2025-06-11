@@ -29,15 +29,15 @@ Este projeto é um teste técnico para vaga de desenvolvedor backend para a empr
 - Redis
 
 ### Configurações:
-1. Clone o repositório:
+1. Clonar o repositório:
    ```bash
    git clone git@github.com:manoeljuniorti/rd_station_test.git
    cd < ./diretório onde o projeto foi salvo >
    ```
 
-2. Configure o banco localmente, editando config/database.yml se necessário para usar seu usuário/senha/local.
+2. Configurar o banco localmente, editando config/database.yml se necessário para usar seu usuário/senha/local.
 
-3. Instale as gems:
+3. Instalar as gems:
    ```bash
    bundle install
    ```
@@ -62,9 +62,13 @@ Este projeto é um teste técnico para vaga de desenvolvedor backend para a empr
 - docker-compose
 
 ### Configurações:
-1. Clone o repositório
+1. Clonar o repositório:
+   ```bash
+   git clone git@github.com:manoeljuniorti/rd_station_test.git
+   cd < ./diretório onde o projeto foi salvo >
+   ```
 
-2. Crie o arquivo .env (opcional) para configurar variáveis, ou edite o docker-compose.yml para definir usuários e senhas.
+2. Criar o arquivo .env(opcional), para configurar variáveis, ou edite o docker-compose.yml para definir usuários e senhas.
 
 3. Execute o docker-compose para subir serviços:
    ```bash
