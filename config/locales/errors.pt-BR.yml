@@ -1,4 +1,28 @@
 pt-BR:
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            name:
+              blank: "não pode ficar em branco"
+            price:
+              blank: "não pode ficar em branco"
+              not_a_number: "não é um número"
+              greater_than_or_equal_to: "deve ser maior ou igual a 0"
+        cart_item:
+          attributes:
+            quantity:
+              greater_than: "deve ser maior ou igual a 0"
+    attributes:
+      product:
+        name: "nome"
+        price: "preço"
+
   errors:
+    messages:
+      blank: "não pode ficar em branco"
+      not_a_number: "não é um número"
+      greater_than_or_equal_to: "deve ser maior ou igual a %{count}"
     item_not_found: "Item não encontrado no carrinho."
     invalid_quantity: "A quantidade não pode ser menor ou igual a zero."
